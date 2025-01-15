@@ -1,0 +1,7 @@
+1. git init 
+2. git status (Mengecek perubahan yang lu buat)
+3. git add (Menambahkan perubahan) contoh : git add "config/koneksi.php"
+   git add . (Menambahkan semua perubahan yang terjadi di semua file)
+4. git commit -m "masukan pesan disini" (pesan perubahan yang lu buat)
+5. git push origin master (Mengirim perubahan ke repo)
+6. git pull origin master (Mengambil perubahan dari repo)
