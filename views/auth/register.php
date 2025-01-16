@@ -100,6 +100,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             icon: 'success',
             title: '<?= $success ?>',
             text: '<?= $success_message ?>',
+        }).then(() => {
+            window.location.href = 'login.php';
         });
         <?php elseif (isset($error_type)): ?>
         Swal.fire({
