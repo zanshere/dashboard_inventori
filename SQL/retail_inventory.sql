@@ -166,6 +166,12 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indeks untuk tabel 'users'
+--
+ALTER TABLE `users` 
+ADD `email` VARCHAR(50) NOT NULL AFTER `password`, ADD `name` VARCHAR(50) NOT NULL AFTER `email`;
+
+--
 -- Indeks untuk tabel `customers`
 --
 ALTER TABLE `customers`
