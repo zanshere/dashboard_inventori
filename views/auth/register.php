@@ -19,6 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (strlen($password) < 8) {
         $error_type = "password";
         $error_message = "Minimal password adalah 8 karakter!";
+    } elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error_type = "email";
+        $error_message = "Isi email dengan format yang benar!";
     } else {
         // Mengenkripsi password akun user
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
