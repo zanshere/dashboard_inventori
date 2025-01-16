@@ -34,6 +34,7 @@ exit;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript">
         <?php if (isset($success_message)): ?>
         Swal.fire({
