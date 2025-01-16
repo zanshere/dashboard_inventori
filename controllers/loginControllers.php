@@ -9,8 +9,8 @@ $username = $_POST['username'];
 
 // Validasi input kosong
 if (empty($email) || empty($password) || empty($username)) {
-    echo '<script>alert("Semua kolom harus diisi!");</script>';
-    header('Refresh: 0; url=../views/auth/login.php');
+    $error_type = "form";
+    $error_message = "Pastikan semua form input terisi!";
     exit;
 }
 
@@ -20,6 +20,37 @@ $stmt->bind_param("i", $email);
 $stmt->execute();
 $data = $stmt->get_result()->fetch_assoc();
 
-header('Refresh: 0; url=../dashboard/index.php');
+$direct = "../views/dashboard/overview.php";
+$success_type = "Login Berhasil";
+$success_message = "Hi, Kamu sudah bisa mengakses halaman dashboard";
 exit;
-    
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        <?php if (isset($success_message)): ?>
+        Swal.fire({
+            icon: 'success',
+            title: '<?= $success_type ?>',
+            text: '<?= $success_message ?>',
+        }).then(() => {
+            window.location.href = '<?= $direct ?>';
+        });
+        <?php elseif (isset($error_message)): ?>
+        Swal.fire({
+            icon: 'error',
+            title: '<?= $error_type ?>',
+            text: '<?= $error_message ?>',
+        });
+        <?php endif; ?>
+    </script>
+</body>
+</html>
