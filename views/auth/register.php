@@ -95,19 +95,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- SweetAlert Logic -->
     <script>
-        <?php if (isset($error_message)): ?>
-        Swal.fire({
-            icon: 'error',
-            title: '<?= $error_type ?>',
-            text: '<?= $error_message ?>',
-        });
-        <?php endif; ?>
-
-        <?php if (isset($success_message)): ?>
+        <?php if (isset($success)): ?>
         Swal.fire({
             icon: 'success',
             title: '<?= $success ?>',
             text: '<?= $success_message ?>',
+        });
+        <?php elseif (isset($error_type)): ?>
+        Swal.fire({
+            icon: 'error',
+            title: '<?= $error_type ?>',
+            text: '<?= $error_message ?>',
         });
         <?php endif; ?>
     </script>
