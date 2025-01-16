@@ -11,6 +11,10 @@
 
 </head>
 <body>
+<<<<<<< HEAD
+    <h1>welcome</h1>
+    <p>tes</p>
+=======
     <!-- Sidebar -->
     <nav class="navbar bg-body-tertiary fixed-top">
   <div class="container-fluid">
@@ -53,5 +57,6 @@
     </div>
   </div>
 </nav>
+>>>>>>> 2e490c3221fd1e8f76981fd4ff2cfca7dbf94e60
 </body>
 </html>
