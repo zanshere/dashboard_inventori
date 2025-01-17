@@ -1,73 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar with Sidebar</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/7c1699d806.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/CSS/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu - Full Right Sidebar</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/CSS/index.css">
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100" x-data="{ isOpen: false }">
 
-<nav class="bg-gray-800 fixed top-0 w-full z-10">
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-    <div class="relative flex items-center justify-between h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" id="navbarToggler" aria-controls="navbarTogglerContent" aria-expanded="false" aria-label="Main menu">
-          <span class="sr-only">Open main menu</span>
-          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-        <a href="#" class="text-white text-xl font-semibold">Offcanvas Navbar</a>
-      </div>
-    </div>
-  </div>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold text-gray-800">MyApp</div>
 
-  <!-- Offcanvas Menu -->
-  <div id="navbarTogglerContent" class="sm:hidden fixed inset-0 z-20 bg-gray-800 bg-opacity-75 hidden">
-    <div class="relative flex flex-col items-center justify-between min-h-full">
-      <div class="w-full py-6 px-6 bg-gray-900 text-white">
-        <div class="flex items-center justify-between">
-          <h5 class="text-xl font-semibold">Offcanvas</h5>
-          <button type="button" id="closeNavbar" class="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-            <span class="sr-only">Close menu</span>
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
+            <!-- Hamburger Menu -->
+            <button @click="isOpen = !isOpen" class="text-gray-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
-      </div>
-      <div class="w-full px-6 py-4">
-        <ul class="space-y-4">
-          <li><a href="#" class="text-white">Home</a></li>
-          <li><a href="#" class="text-white">Link</a></li>
-          <li class="relative">
-            <button class="text-white">Dropdown</button>
-            <ul class="space-y-2 mt-2 bg-gray-800 p-3 absolute w-full left-0 hidden">
-              <li><a href="#" class="text-white">Action</a></li>
-              <li><a href="#" class="text-white">Another action</a></li>
-              <li><a href="#" class="text-white">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="w-full px-6 py-4">
-        <form class="flex">
-          <input type="search" class="form-input w-full px-4 py-2 text-gray-700 border border-gray-500 rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Search">
-          <button type="submit" class="btn bg-green-500 text-white px-4 py-2 rounded-r-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            Search
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</nav>
+    </nav>
 
-  <!-- Javascript -->
-  <script src="assets/JS/index.js"></script>
+    <!-- Sidebar -->
+    <div
+        class="fixed inset-y-0 right-0 bg-white w-full max-w-sm shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-20"
+        :class="{ 'translate-x-0': isOpen, 'translate-x-full': !isOpen }">
+        <div class="p-4 flex justify-between items-center border-b">
+            <h2 class="text-lg font-semibold text-gray-800">Menu</h2>
+            <button @click="isOpen = false" class="text-gray-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <ul class="p-4 space-y-4">
+            <li><a href="#home" class="block text-gray-600 hover:text-gray-800">Home</a></li>
+            <li><a href="#about" class="block text-gray-600 hover:text-gray-800">About</a></li>
+            <li><a href="#services" class="block text-gray-600 hover:text-gray-800">Services</a></li>
+            <li><a href="#contact" class="block text-gray-600 hover:text-gray-800">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Overlay -->
+    <div 
+        class="fixed inset-0 bg-black bg-opacity-50 z-10 transition-opacity duration-300"
+        x-show="isOpen"
+        @click="isOpen = false"
+        x-transition:enter="ease-out duration-300"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="ease-in duration-300"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0">
+    </div>
 </body>
 </html>
