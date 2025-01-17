@@ -1,4 +1,10 @@
-<!doctype html>
+<?php 
+require '../../config/koneksi.php';
+require '../../controllers/authControllers.php';
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login PHP</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
@@ -68,6 +75,25 @@
             </form>
         </div>
     </div>
+
+    <!-- SweetAlert -->
+    <script type="text/javascript">
+        <?php if (isset($success_message)): ?>
+        Swal.fire({
+            icon: 'success',
+            title: '<?= $success_type ?>',
+            text: '<?= $success_message ?>',
+        }).then(() => {
+            window.location.href = '<?= $direct ?>';
+        });
+        <?php elseif (isset($error_message)): ?>
+        Swal.fire({
+            icon: 'error',
+            title: '<?= $error_type ?>',
+            text: '<?= $error_message ?>',
+        });
+        <?php endif; ?>
+    </script>
 </body>
 
 </html>
