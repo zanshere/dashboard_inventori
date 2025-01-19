@@ -229,6 +229,20 @@
     </div>
 </div>
 
+<section id="welcome" class="h-screen bg-cover bg-center animate-fade-in" style="background-image: url('https://source.unsplash.com/1600x900/?welcome');">
+
+    <div class="h-full bg-gray-900 bg-opacity-50 flex items-center justify-center">
+        <div class="text-center fade-in">
+            <h2 class="text-5xl font-extrabold mb-6 text-white animate-fade-in">Welcome to Our Retail Inventory</h2>
+            <p class="text-xl text-white animate-fade-in">We are delighted to have you here. Explore our wide range of products.</p>
+
+
+            <a href="#gallery" class="mt-8 inline-block px-6 py-3 bg-yellow-500 text-gray-900 rounded-full text-lg font-semibold hover:bg-yellow-400 smooth-scroll transform transition-transform duration-300 hover:scale-105">Explore Now</a>
+
+        </div>
+    </div>
+</section>
+
 
 <!-- Overlay for Sidebar -->
 <div class="fixed inset-0 bg-black bg-opacity-50 z-10" x-show="isOpen" @click="isOpen = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
