@@ -61,6 +61,20 @@
     x-transition:leave-end="opacity-0">
 </div>
 
+<section id="welcome" class="h-screen bg-cover bg-center animate-fade-in" style="background-image: url('https://source.unsplash.com/1600x900/?welcome');">
+
+    <div class="h-full bg-gray-900 bg-opacity-50 flex items-center justify-center">
+        <div class="text-center fade-in">
+            <h2 class="text-5xl font-extrabold mb-6 text-white animate-fade-in">Welcome to Our Retail Inventory</h2>
+            <p class="text-xl text-white animate-fade-in">We are delighted to have you here. Explore our wide range of products.</p>
+
+
+            <a href="#gallery" class="mt-8 inline-block px-6 py-3 bg-yellow-500 text-gray-900 rounded-full text-lg font-semibold hover:bg-yellow-400 smooth-scroll transform transition-transform duration-300 hover:scale-105">Explore Now</a>
+
+        </div>
+    </div>
+</section>
+
 
 </body>
 </html>
