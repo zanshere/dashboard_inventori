@@ -91,7 +91,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h5 class="mb-6 text-center text-2xl font-bold text-gray-800">Hello There!</h5>
 
             <!-- Form -->
-            <form action="" method="POST">
+            <form action="../../controllers/authControllers.php" method="POST">
+                <input type="hidden" name="action" value="register">
                 <div class="mb-4">
                     <label for="username" class="block text-sm font-bold text-gray-700">Username</label>
                     <input type="text" class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500" name="username" placeholder="Your Username" required>
