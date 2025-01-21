@@ -52,6 +52,7 @@ require '../../controllers/authControllers.php';
 
             <!-- Form -->
             <form action="../../controllers/loginControllers.php" method="POST">
+                <input type="hidden" name="action" value="login">
                 <div class="mb-4">
                     <label for="username" class="block text-sm font-bold text-gray-700">Username</label>
                     <input type="text" class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500" name="username" required>
