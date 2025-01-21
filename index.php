@@ -69,7 +69,7 @@
             <p class="text-xl text-white animate-fade-in">We are delighted to have you here. Explore our wide range of products.</p>
 
 
-            <a href="#gallery" class="mt-8 inline-block px-6 py-3 bg-yellow-500 text-gray-900 rounded-full text-lg font-semibold hover:bg-yellow-400 smooth-scroll transform transition-transform duration-300 hover:scale-105">Explore Now</a>
+            <a href="#gallery" class="mt-8 inline-block px-6 py-3 bg-yellow-500 text-gray-900 rounded-full text-lg font-semibold hover:bg-yellow-400 smooth-scroll transform transition-transform duration-300 hover:scale-105">Explore Now </a>
 
         </div>
     </div>
