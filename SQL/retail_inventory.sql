@@ -170,6 +170,8 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `users` 
 ADD `email` VARCHAR(50) NOT NULL AFTER `password`, ADD `name` VARCHAR(50) NOT NULL AFTER `email`;
+ALTER TABLE `users` 
+CHANGE `role` `role` ENUM('admin','staff','customer') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
 
 --
 -- Indeks untuk tabel `customers`
