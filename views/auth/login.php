@@ -65,6 +65,15 @@ require '../../controllers/authControllers.php';
                     <label for="password" class="block text-sm font-bold text-gray-700">Password</label>
                     <input type="password" class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500" name="password" required>
                 </div>
+                <div class="mb-4">
+                    <label for="role" class="block text-sm font-bold text-gray-700">Role</label>
+                    <select name="role" class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500" required>
+                        <option value="" disabled selected>Select a role</option>
+                        <option value="admin">Admin</option>
+                        <option value="costumer">Costumer</option>
+                        <option value="staff">Staff</option>
+                    </select>
+                </div>
                 <div class="flex justify-between items-center mb-6">
                     <p class="text-sm text-gray-600">
                         Belum punya akun? <a href="register.php" class="text-indigo-500 hover:underline font-semibold">Register</a>
