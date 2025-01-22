@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $role = $_POST['role'];
 
     // Validasi input
-    $valid_roles = ['admin', 'staff'];
+    $valid_roles = ['admin', 'staff', 'costumer'];
     if (empty($username) || empty($password) || empty($email) || empty($name) || empty($role)) {
         $error_type = "form";
         $error_message = "Pastikan tidak ada yang kosong!";
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h5 class="mb-6 text-center text-2xl font-bold text-gray-800">Hello There!</h5>
 
             <!-- Form -->
-            <form action="../../controllers/authControllers.php" method="POST">
+            <form action="" method="POST">
                 <input type="hidden" name="action" value="register">
                 <div class="mb-4">
                     <label for="username" class="block text-sm font-bold text-gray-700">Username</label>
@@ -114,6 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <select name="role" class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500" required>
                         <option value="" disabled selected>Select a role</option>
                         <option value="admin">Admin</option>
+                        <option value="costumer">Member</option>
                         <option value="staff">Staff</option>
                     </select>
                 </div>

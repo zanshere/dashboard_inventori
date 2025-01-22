@@ -1,5 +1,5 @@
 <?php 
-$conn = mysqli_connect("localhost", "USERNAME", "PASSWORD", "DB_NAME");
+$conn = mysqli_connect("localhost", "root", "Aditkontol123", "dashboard");
 
 if($conn->connect_error){
     die("Can't Connect : " . $conn->connect_error);
