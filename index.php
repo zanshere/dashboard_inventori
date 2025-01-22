@@ -54,7 +54,7 @@
         <li><a href="#" @click.prevent="currentPage = 'control_account'; isOpen = false" class="text-gray-900 hover:text-gray-600">Control Account</a></li>
     </ul>
 
-    <div class="mt-8 space-y-4">
+    <div class="mt-8 space-y-4"> 
         <a href="views/auth/login.php" class="block text-center text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white py-2 rounded-md transition duration-300">Login</a>
         <a href="views/auth/register.php" class="block text-center text-green-500 border border-green-500 hover:bg-green-500 hover:text-white py-2 rounded-md transition duration-300">Register</a>
     </div>
