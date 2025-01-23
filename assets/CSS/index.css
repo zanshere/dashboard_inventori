@@ -10,3 +10,30 @@
 .transition-all {
   transition: all 0.5s ease;
 }
+
+.animated-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.animated-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.animated-link:hover {
+  color: #4B5563; /* Warna teks saat hover */
+}
+
+.animated-link:hover::after {
+  width: 100%; /* Animasi garis underline */
+}
