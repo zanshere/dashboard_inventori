@@ -6,6 +6,7 @@
     <title>Retail Inventory</title>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/index.css">
 </head>
 <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen" x-data="{ isOpen: false, currentPage: 'home' }">
@@ -35,7 +36,7 @@
     class="fixed inset-y-0 right-0 w-64 bg-white h-full p-6 space-y-6 z-20">
     <!-- Sidebar Content -->
     <div class="flex justify-between items-center">
-        <h2 class="text-lg font-semibold text-gray-900">Menu</h2>
+        <h2 class="text-lg font-semibold text-gray-900"><i class="fas fa-bars mr-2"></i>Menu</h2>
         <button @click="isOpen = false" class="text-gray-900 focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -43,20 +44,42 @@
         </button>
     </div>
     <ul class="space-y-4">
-        <li><a href="#" @click.prevent="currentPage = 'home'; isOpen = false" class="text-gray-900 hover:text-gray-600">Home</a></li>
-        <li><a href="#" @click.prevent="currentPage = 'about'; isOpen = false" class="text-gray-900 hover:text-gray-600">About</a></li>
-        <li><a href="#" @click.prevent="currentPage = 'products'; isOpen = false" class="text-gray-900 hover:text-gray-600">Products</a></li>
-        <li><a href="#" @click.prevent="currentPage = 'inventory'; isOpen = false" class="text-gray-900 hover:text-gray-600">Inventory</a></li>
-        <li><a href="#" @click.prevent="currentPage = 'orders'; isOpen = false" class="text-gray-900 hover:text-gray-600">Orders</a></li>
-        <li><a href="#" @click.prevent="currentPage = 'customers'; isOpen = false" class="text-gray-900 hover:text-gray-600">Customers</a></li>
-        <li><a href="#" @click.prevent="currentPage = 'contact'; isOpen = false" class="text-gray-900 hover:text-gray-600">Contact Us</a></li>
-        <li><a href="#" @click.prevent="currentPage = 'faq'; isOpen = false" class="text-gray-900 hover:text-gray-600">FAQs</a></li>
-        <li><a href="#" @click.prevent="currentPage = 'control_account'; isOpen = false" class="text-gray-900 hover:text-gray-600">Control Account</a></li>
-    </ul>
+    <li><a href="#" @click.prevent="currentPage = 'home'; isOpen = false" class="animated-link text-gray-900 hover:text-gray-600">
+        <i class="fas fa-home mr-2"></i>Home
+    </a></li>
+    <li><a href="#" @click.prevent="currentPage = 'about'; isOpen = false" class=" animated-link text-gray-900 hover:text-gray-600">
+        <i class="fas fa-info-circle mr-2"></i>About
+    </a></li>
+    <li><a href="#" @click.prevent="currentPage = 'products'; isOpen = false" class="animated-link text-gray-900 hover:text-gray-600">
+        <i class="fas fa-box-open mr-2"></i>Products
+    </a></li>
+    <li><a href="#" @click.prevent="currentPage = 'inventory'; isOpen = false" class="animated-link text-gray-900 hover:text-gray-600">
+        <i class="fas fa-warehouse mr-2"></i>Inventory
+    </a></li>
+    <li><a href="#" @click.prevent="currentPage = 'orders'; isOpen = false" class="animated-link text-gray-900 hover:text-gray-600">
+        <i class="fas fa-shopping-cart mr-2"></i>Orders
+    </a></li>
+    <li><a href="#" @click.prevent="currentPage = 'customers'; isOpen = false" class="animated-link text-gray-900 hover:text-gray-600">
+        <i class="fas fa-users mr-2"></i>Customers
+    </a></li>
+    <li><a href="#" @click.prevent="currentPage = 'contact'; isOpen = false" class="animated-link text-gray-900 hover:text-gray-600">
+        <i class="fas fa-envelope mr-2"></i>Contact Us
+    </a></li>
+    <li><a href="#" @click.prevent="currentPage = 'faq'; isOpen = false" class="animated-link text-gray-900 hover:text-gray-600">
+        <i class="fas fa-question-circle mr-2"></i>FAQs
+    </a></li>
+    <li><a href="#" @click.prevent="currentPage = 'control_account'; isOpen = false" class="animated-link text-gray-900 hover:text-gray-600">
+        <i class="fas fa-user-cog mr-2"></i>Control Account
+    </a></li>
+</ul>
 
-    <div class="mt-8 space-y-4"> 
-        <a href="views/auth/login.php" class="block text-center text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white py-2 rounded-md transition duration-300">Login</a>
-        <a href="views/auth/register.php" class="block text-center text-green-500 border border-green-500 hover:bg-green-500 hover:text-white py-2 rounded-md transition duration-300">Register</a>
+    <div class="mt-8 space-y-4">
+        <a href="views/auth/login.php" class="element block text-center text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white py-2 rounded-md transition duration-300">
+            <i class="fas fa-sign-in-alt mr-2"></i>Login
+        </a>
+        <a href="views/auth/register.php" class="element block text-center text-green-500 border border-green-500 hover:bg-green-500 hover:text-white py-2 rounded-md transition duration-300">
+            <i class="fas fa-user-plus mr-2"></i>Register
+        </a>
     </div>
 </div>
 
