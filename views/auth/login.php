@@ -94,7 +94,7 @@ require '../../controllers/authControllers.php';
             title: '<?= $success_type ?>',
             text: '<?= $success_message ?>',
         }).then(() => {
-            window.location.href = '<?= $direct ?>';
+            window.location.href = '<?= $redirect_url ?>';
         });
         <?php elseif (isset($error_message)): ?>
         Swal.fire({
