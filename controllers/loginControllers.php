@@ -33,13 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $redirect_url = '';
             switch ($user['role']) {
                 case 'admin':
-                    $redirect_url = 'admin_dashboard.php';
+                    $redirect_url = '../views/dashboard/admin.php';
                     break;
                 case 'staff':
-                    $redirect_url = 'staff_dashboard.php';
+                    $redirect_url = '../views/dashboard/staff.php';
                     break;
                 case 'costumer':
-                    $redirect_url = 'costumer_dashboard.php';
+                    $redirect_url = '../views/dashboard/costumer.php';
                     break;
                 default:
                     $error_type = 'Role Tidak Valid';
